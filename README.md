@@ -1,4 +1,4 @@
-# IronVault - Personal Lift Tracker 🏋️‍♂️
+ Personal Lift Tracker 
 
 A lightweight, web-based workout tracking application designed to log and manage a 5-day Push/Pull/Legs and Upper/Arms split. 
 
