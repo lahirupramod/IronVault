@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronVault | Lift Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IronVault Tracker</h1>
+            <p>Track your Push, Pull, Legs progression</p>
+        </header>
+
+        <form id="workout-form">
+            <div class="form-group">
+                <label for="split">Routine Split</label>
+                <select id="split" required>
+                    <option value="Push">Push (Chest, Shoulders, Triceps)</option>
+                    <option value="Pull">Pull (Back, Biceps)</option>
+                    <option value="Legs">Legs (Quads, Hamstrings, Calves)</option>
+                    <option value="Upper">Upper Body</option>
+                    <option value="Arms">Arms Focus</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="exercise">Exercise Name</label>
+                <input type="text" id="exercise" placeholder="e.g., Incline Dumbbell Press" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="sets">Sets</label>
+                    <input type="number" id="sets" placeholder="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="reps">Reps</label>
+                    <input type="number" id="reps" placeholder="0" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Log Workout</button>
+        </form>
+
+        <table class="workout-table">
+            <thead>
+                <tr>
+                    <th>Split</th>
+                    <th>Exercise</th>
+                    <th>Weight</th>
+                    <th>Sets x Reps</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="workout-list">
+                <!-- Workouts will be injected here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
